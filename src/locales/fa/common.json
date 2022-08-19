@@ -1,0 +1,16 @@
+{
+	"4zelei": "چهارضلعی",
+	"password": {
+		"label": "رمز عبور شما",
+		"placeholder": "رمز عبور را اینجا وارد کنید"
+	},
+	"phone": {
+		"label": "شماره موبایل",
+		"placeholder": "شماره موبایل خود را وارد کنید"
+	},
+	"nestingExample": {
+		"te": "text | $t(nestingExample2)"
+	},
+	"nestingExample2": "sd $t(nestingExample3)",
+	"nestingExample3": "deeply nested in common"
+}
