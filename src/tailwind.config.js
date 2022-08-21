@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const withMT = require("@material-tailwind/react/utils/withMT");
+module.exports = withMT({
 	important: true,
 	content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
 	theme: {
@@ -10,6 +11,7 @@ module.exports = {
 			colors: {
 				muted: "#858f9c",
 				"signUp-bg": "#f7f9ff",
+				"4zp": "#f97316",
 			},
 			fontSize: {
 				xss: "0.375rem",
@@ -32,40 +34,4 @@ module.exports = {
 			Estedad: ["Estedad"],
 		},
 	},
-	plugins: [require("daisyui")],
-	daisyui: {
-		themes: [
-			{
-				iraniCard: {
-					primary: "#2860e6",
-					"primary-focus": "#1c49bc",
-					"primary-content": "#fff",
-
-					secondary: "#1c49bc",
-					accent: "#3b66ff",
-
-					neutral: "#0a0b01",
-					"neutral-focus": "#000",
-					"neutral-content": "#fff",
-
-					"base-100": "#FFF",
-					"base-content": "#000",
-
-					info: "#2860e6",
-					"info-content": "#fff",
-
-					success: "#1ae68c",
-					"success-content": "#fff",
-
-					warning: "#ffd461",
-					"success-content": "#fff",
-
-					error: "#ef3b5e",
-					"error-content": "#fff",
-
-					"--rounded-btn": "0.125rem",
-				},
-			},
-		],
-	},
-};
+});

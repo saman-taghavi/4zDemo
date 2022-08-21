@@ -18,6 +18,9 @@ import { queryClient as defaultQueryClient } from "utils/defaultQueryOptions";
 import { ToastContainer, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+// material ui
+import { ThemeProvider } from "@material-tailwind/react";
+
 export type NextPageWithLayout = NextPage & {
 	getLayout?: (page: ReactElement) => ReactNode;
 };
@@ -34,21 +37,23 @@ export function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 	return (
 		<QueryClientProvider client={queryClient}>
 			<Hydrate state={pageProps.dehydratedState}>
-				{getLayout(<Component {...pageProps} />)}
-				<ToastContainer
-					position="bottom-left"
-					autoClose={5000}
-					hideProgressBar={false}
-					newestOnTop
-					closeOnClick
-					rtl
-					pauseOnFocusLoss
-					draggable
-					pauseOnHover
-					theme="colored"
-					bodyClassName="font-Estedad text-sm"
-					transition={Slide}
-				/>
+				<ThemeProvider>
+					{getLayout(<Component {...pageProps} />)}
+					<ToastContainer
+						position="bottom-left"
+						autoClose={5000}
+						hideProgressBar={false}
+						newestOnTop
+						closeOnClick
+						rtl
+						pauseOnFocusLoss
+						draggable
+						pauseOnHover
+						theme="colored"
+						bodyClassName="font-Estedad text-sm"
+						transition={Slide}
+					/>
+				</ThemeProvider>
 				<ReactQueryDevtools initialIsOpen={false} />
 			</Hydrate>
 		</QueryClientProvider>

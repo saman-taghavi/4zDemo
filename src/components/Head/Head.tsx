@@ -5,7 +5,7 @@ import { useTranslation } from "next-i18next";
 
 const HeadComponent = (props: HeadProps) => {
 	const { t } = useTranslation(["common"]);
-	const mainTitle = t("common:iranicard");
+	const mainTitle = t("common:4zelei");
 	const [title, setTitle] = useState(mainTitle);
 
 	useEffect(() => {
