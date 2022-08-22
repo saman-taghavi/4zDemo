@@ -23,14 +23,18 @@
 		"axios": "^0.27.2",
 		"daisyui": "^2.19.1",
 		"iconsax-react": "^0.0.8",
+		"keen-slider": "^6.7.0",
 		"next": "12.2.2",
 		"next-i18next": "^11.3.0",
+		"pure-react-carousel": "^1.29.0",
 		"react": "18.2.0",
+		"react-awesome-slider": "^4.1.0",
 		"react-collapsed": "^3.3.2",
 		"react-dom": "18.2.0",
 		"react-hook-form": "^7.33.1",
 		"react-toastify": "^9.0.8",
 		"react-use": "^17.4.0",
+		"swiper": "^8.3.2",
 		"zod": "^3.17.10"
 	},
 	"devDependencies": {

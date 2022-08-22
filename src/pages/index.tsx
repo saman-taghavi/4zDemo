@@ -2,12 +2,13 @@ import type { NextPageWithLayout } from "./_app";
 import Layout from "components/Layout/Layout";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Button } from "@material-tailwind/react";
+import { Cswiper } from "@/components/Carousel";
 
 const Home: NextPageWithLayout = () => {
 	return (
 		<>
-			<div className="flex items-center justify-center bg-blue-gray-600">
-				{/* <Button>click me bro</Button> */}
+			<div className="flex items-center justify-center  mt-5">
+				<Cswiper />
 			</div>
 		</>
 	);
