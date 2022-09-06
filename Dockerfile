@@ -14,7 +14,7 @@ WORKDIR /src
 
 # Install dependencies based on the preferred package manager
 COPY src/package.json  /src/
-COPY src/.npmrc  .
+# COPY src/.npmrc  .
 COPY src/next.config.js  /src/
 COPY src/next-i18next.config.js  /src/
 RUN npm i

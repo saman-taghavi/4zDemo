@@ -19,7 +19,7 @@ export const Cswiper = () => {
 
 				modules={[Pagination, Autoplay]}
 				autoplay={{
-					delay: 1500,
+					delay: 15000,
 					disableOnInteraction: false,
 				}}
 				slidesPerView={1}

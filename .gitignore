@@ -1,7 +1,6 @@
 # to ignore lock files
 *.lock
-*-lock.*
-
+*-lock
 # node modules
 node_modules
 # remove nex-env.d.ts
