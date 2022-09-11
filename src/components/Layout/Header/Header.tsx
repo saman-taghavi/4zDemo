@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navbar, MobileNav, Typography, Button, IconButton } from "@material-tailwind/react";
 import Image from "next/image";
-import Logo from "@/assets/img/Logo.jpg";
+import Logo from "@/assets/img/Logo.png";
 import { useTranslation } from "next-i18next";
 import NavList from "../NavList";
 export default function Header() {
@@ -13,17 +13,17 @@ export default function Header() {
 	}, []);
 
 	return (
-		<Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 sticky top-0 z-50">
-			<div className="container mx-auto flex items-center md:justify-between  text-blue-gray-900">
+		<Navbar className="sticky top-0 z-50 mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4">
+			<div className="container mx-auto flex items-center text-blue-gray-900  md:justify-between">
 				<Typography
 					as="a"
 					href="#"
 					variant="small"
-					className="mr-4 cursor-pointer py-1.5 font-black text-xl font-Estedad flex items-center justify-between">
+					className="mr-4 flex cursor-pointer items-center justify-between py-1.5 font-Estedad text-xl font-black">
 					<span>{t("4zelei")}</span>
 				</Typography>
-				<div className="flex justify-around items-center ">
-					<div className="hidden lg:block px-10">
+				<div className="flex items-center justify-around ">
+					<div className="hidden px-10 lg:block">
 						<NavList />
 					</div>
 					<Button variant="gradient" size="sm" className="hidden lg:inline-block">
@@ -32,7 +32,7 @@ export default function Header() {
 				</div>
 				<IconButton
 					variant="text"
-					className="mr-auto my-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+					className="my-auto mr-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
 					ripple={false}
 					onClick={() => setOpenNav(!openNav)}>
 					{openNav ? (

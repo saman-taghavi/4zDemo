@@ -17,8 +17,8 @@ const NavSingleItem = ({ title }: { title: string }) => {
 	return (
 		<a
 			href="#"
-			className="flex items-center hover:relative  before:absolute  before:h-1 before:bottom-full before:duration-300  before:mb-2 before:scale-x-0 before:hover:scale-x-100  transition-transform  ease-linear  transform	  before:w-1/2 before:left-1/4 before:rounded-full  before:bg-4zp
-		 hover:bg-transparent text-balck hover:text-4zp   before:active:scale-x-100 cursor-pointer
+			className="text-balck flex transform  cursor-pointer  items-center transition-transform ease-linear  before:absolute before:bottom-full before:left-1/4  before:mb-2  before:h-1  before:w-1/2	  before:scale-x-0 before:rounded-full before:bg-4zp  before:duration-300
+		 hover:relative hover:bg-transparent hover:text-4zp   before:hover:scale-x-100 before:active:scale-x-100
 		">
 			{title}
 		</a>
@@ -29,7 +29,7 @@ export default function NavList() {
 	const { t } = useTranslation();
 	const [isOpen, setIsOpen] = useState(false);
 	const handleMenuClick = () => setIsOpen(!isOpen);
-	const handleMenuKeyDown = (e) => {
+	const handleMenuKeyDown = (e: KeyboardEvent) => {
 		if (e.key === "Enter") {
 			setIsOpen(false);
 		}
@@ -44,10 +44,10 @@ export default function NavList() {
 			<Menu>
 				<MenuHandler onClick={handleMenuClick}>
 					<a
-						className="hover:relative  before:absolute  before:h-1 before:bottom-full before:duration-300  before:mb-2 before:scale-x-0 before:hover:scale-x-50  transition-transform  ease-linear  transform	  before:w-1/2 before:left-1/4 before:rounded-full  before:bg-4zp
-						 hover:bg-transparent text-balck hover:text-4zp   before:active:scale-x-50 cursor-pointer
+						className="text-balck  transform  cursor-pointer transition-transform ease-linear  before:absolute before:bottom-full before:left-1/4  before:mb-2  before:h-1  before:w-1/2	  before:scale-x-0 before:rounded-full before:bg-4zp  before:duration-300
+						 hover:relative hover:bg-transparent hover:text-4zp   before:hover:scale-x-50 before:active:scale-x-50
 						">
-						<div className="flex justify-between items-center ">
+						<div className="flex items-center justify-between ">
 							<div className={`mx-2 ${isOpen ? "text-4zp" : ""}`}>clickable Menu</div>
 							<Transition
 								show={true}

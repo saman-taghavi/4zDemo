@@ -17,7 +17,7 @@ COPY src/package.json  /src/
 # COPY src/.npmrc  .
 COPY src/next.config.js  /src/
 COPY src/next-i18next.config.js  /src/
-RUN npm i
+RUN yarn
 
 # Rebuild the source code only when needed
 FROM node:16-alpine AS builder
@@ -32,7 +32,7 @@ COPY  src .
 # ENV NEXT_TELEMETRY_DISABLED 1
 ARG BASE_URL
 ENV BASE_URL=${BASE_URL}
-RUN npm run build
+RUN yarn build
 
 
 # If using npm comment out above and use below instead

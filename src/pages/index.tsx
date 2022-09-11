@@ -1,55 +1,21 @@
 import type { NextPageWithLayout } from "./_app";
-import Layout from "components/Layout/Layout";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { Button } from "@material-tailwind/react";
-import { Cswiper } from "@/components/Carousel";
-import { Scard } from "@/components/Card";
-import { Activity, Airdrop, Airplane, Airpod, Airpods } from "iconsax-react";
+import Image from "next/image";
+import confetti from "@/assets/img/confetti.jpg";
+import Logo from "@/assets/img/Logo.png";
 
 const Home: NextPageWithLayout = () => {
 	return (
 		<>
-			<div className="flex flex-col items-center justify-center  mt-5">
-				<div className="pb-96">
-					<Cswiper />
+			<div dir="rtl" className="flex h-screen w-screen flex-col items-center justify-center bg-4zp">
+				{/* <Image src={confetti} layout="fill" objectFit="cover" /> */}
+				<div className="mr-12">
+					<Image alt="4zLogo" src={Logo} objectFit="contain" width={"160"} height={"200"} />
 				</div>
-				<div id="why" className="  self-start font-Estedad">
-					<p className="font-black text-4xl "> چرا چهارضلعی را انتخاب کنیم؟</p>
-					<div className="grid grid-cols-5 gap-7 gap-y-10 pt-20">
-						<Scard
-							Icon={Airdrop}
-							title="آنالیز کسب و کار"
-							text="ارائه بهترین نمودارها جهت بررسی و تحلیل فعالیت‌ شما و ارائه مشاوره‌های موثر مالی"
-						/>
-						<Scard
-							Icon={Airplane}
-							title="آنالیز کسب و کار"
-							text="ارائه بهترین نمودارها جهت بررسی و تحلیل فعالیت‌ شما و ارائه مشاوره‌های موثر مالی"
-						/>
-						<Scard
-							Icon={Airpods}
-							title="آنالیز کسب و کار"
-							text="ارائه بهترین نمودارها جهت بررسی و تحلیل فعالیت‌ شما و ارائه مشاوره‌های موثر مالی"
-						/>
-						<Scard
-							Icon={Airpod}
-							title="آنالیز کسب و کار"
-							text="ارائه بهترین نمودارها جهت بررسی و تحلیل فعالیت‌ شما و ارائه مشاوره‌های موثر مالی"
-						/>
-						<Scard
-							Icon={Activity}
-							title="آنالیز کسب و کار"
-							text="ارائه بهترین نمودارها جهت بررسی و تحلیل فعالیت‌ شما و ارائه مشاوره‌های موثر مالی"
-						/>
-					</div>
-				</div>
+				<div className="mx-auto flex flex-col items-center justify-center">داریم میایم ...</div>
 			</div>
 		</>
 	);
-};
-
-Home.getLayout = function getLayout(page: React.ReactElement) {
-	return <Layout>{page}</Layout>;
 };
 
 export default Home;
